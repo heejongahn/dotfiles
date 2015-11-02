@@ -1,0 +1,19 @@
+Host nobell
+  HostName 54.92.66.230
+  User ubuntu
+
+Host archi
+  HostName vc198.kaist.ac.kr
+  User team42
+
+Host sparcs
+  HostName sparcs.org
+  User nobell
+
+Host testing
+  HostName verifier7.kaist.ac.kr
+  User cs453_20130380
+
+Host marple
+  HostName marple.kaist.ac.kr
+  User aaa

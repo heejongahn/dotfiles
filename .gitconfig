@@ -1,0 +1,12 @@
+[user]
+	email = heejongahn@gmail.com
+	name = Heejong Ahn
+[core]
+        editor = vim
+        excludesfile = ~/.gitglobalignore
+[color]
+        ui = auto
+[push]
+        default = simple
+[credential]
+        helper = cache --timeout=3600
