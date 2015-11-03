@@ -18,6 +18,8 @@ set noshowmode
 set noswapfile
 set nowrap
 
+autocmd filetype crontab setlocal nobackup nowritebackup
+
 " History
 set history=1024
 set undolevels=1024
@@ -97,7 +99,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'tikhomirov/vim-glsl'
 Plug 'evanmiller/nginx-vim-syntax'
 Plug 'stephpy/vim-yaml'
-Plug 'othree/html5.vim'
+Plug 'nvie/vim-flake8'
 
 " General
 Plug 'tpope/vim-sensible'
@@ -118,6 +120,7 @@ Plug '~/.racer/racer', { 'for': 'rust' }
 " Blink
 Plug 'rhysd/clever-f.vim'
 Plug 'Lokaltog/vim-easymotion'
+Plug 'junegunn/vim-xmark', { 'do': 'make' }
 
 call plug#end()
 
