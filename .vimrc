@@ -74,6 +74,7 @@ nnoremap <esc>6 6gt
 nnoremap <esc>7 7gt
 nnoremap <esc>8 8gt
 nnoremap <esc>9 9gt
+nnoremap $ :noh<Return>
 
 " define a group `vimrc` and initialize.
 augroup vimrc
@@ -100,6 +101,8 @@ Plug 'tikhomirov/vim-glsl'
 Plug 'evanmiller/nginx-vim-syntax'
 Plug 'stephpy/vim-yaml'
 Plug 'nvie/vim-flake8'
+Plug 'digitaltoad/vim-jade'
+Plug 'scrooloose/syntastic'
 
 " General
 Plug 'tpope/vim-sensible'
@@ -176,7 +179,6 @@ let g:clever_f_smart_case = 1
 " vim-easymotion
 map  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
-
 
 "
 " Beutiful vim

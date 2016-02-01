@@ -1,6 +1,7 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/nobell/.oh-my-zsh
+export ZSH=${HOME}/.oh-my-zsh
 export DEFAULT_USER="nobell"
+export EDITOR=/usr/local/bin/vim
 
 export BULLETTRAIN_PROMPT_SEPARATE_LINE=false
 export BULLETTRAIN_PROMPT_CHAR=$
@@ -8,13 +9,14 @@ export BULLETTRAIN_PROMPT_CHAR=$
 # Add GHC 7.8.4 to the PATH, via http://ghcformacosx.github.io/
 export GHC_DOT_APP="/Applications/ghc-7.8.4.app"
 if [ -d "$GHC_DOT_APP" ]; then
-    export PATH="${HOME}/.cabal/bin:${GHC_DOT_APP}/Contents/bin:${PATH}"
+    export PATH="${HOME}/.cabal/bin:${GHC_DOT_APP}/Contents/bin:${GOPATH//://bin:}/bin:${PATH}"
 fi
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="bulletin-train"
+ZSH_THEME="bullet_train"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -58,7 +60,7 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+# export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh

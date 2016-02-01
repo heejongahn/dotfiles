@@ -116,4 +116,5 @@ fi
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 source ~/.rvm/scripts/rvm
 source ~/.rvm/scripts/rvm
+
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
