@@ -103,6 +103,8 @@ Plug 'stephpy/vim-yaml'
 Plug 'nvie/vim-flake8'
 Plug 'digitaltoad/vim-jade'
 Plug 'scrooloose/syntastic'
+Plug 'dag/vim-fish'
+Plug 'wavded/vim-stylus'
 
 " General
 Plug 'tpope/vim-sensible'
