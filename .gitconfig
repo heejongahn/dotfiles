@@ -2,7 +2,7 @@
 	email = heejongahn@gmail.com
 	name = Heejong Ahn
 [core]
-        editor = vim
+        editor = nvim
         excludesfile = ~/.gitglobalignore
 [color]
         ui = auto
