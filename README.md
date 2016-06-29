@@ -19,12 +19,21 @@
 
   ```bash
   # OS X
-  brew install
+  brew install fish
+
+  curl -Lo ~/.local/bin/chips --create-dirs \
+    https://github.com/kinoru/chips/releases/download/1.0.0/chips_osx \
+    ; and chmod +x ~/.local/bin/chips
+
 
   # Ubuntu (using PPA)
   sudo apt-add-repository ppa:fish-shell/release-2
   sudo apt-get update
   sudo apt-get install fish
+
+  curl -Lo ~/.local/bin/chips --create-dirs \
+    https://github.com/kinoru/chips/releases/download/1.0.0/chips_linux_x64 \
+    ; and chmod +x ~/.local/bin/chips
   ```
 
 3. Make sure your default shell is fish
