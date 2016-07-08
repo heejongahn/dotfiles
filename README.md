@@ -60,9 +60,10 @@
   ln -sf dotfiles/.gemrc
   ```
 
-5. Install [Vim-Plug](https://github.com/junegunn/vim-plug)
+5. Install [Vim-Plug](https://github.com/junegunn/vim-plug) and Python provider
 
   ```bash
+  pip install --user --upgrade neovim # For MatchTagAlways Plug
   curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   ```

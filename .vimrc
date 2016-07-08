@@ -105,6 +105,7 @@ Plug 'digitaltoad/vim-jade'
 Plug 'scrooloose/syntastic'
 Plug 'dag/vim-fish'
 Plug 'wavded/vim-stylus'
+Plug 'Valloric/MatchTagAlways'
 
 " General
 Plug 'tpope/vim-sensible'
