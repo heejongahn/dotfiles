@@ -81,6 +81,8 @@ augroup vimrc
   autocmd!
 augroup END
 
+" flake8 auto execution
+autocmd BufWritePost *.py call Flake8()
 
 "
 " Plugins
@@ -89,7 +91,7 @@ call plug#begin('~/.vim/plugged')
 
 " Beauty
 Plug 'flazz/vim-colorschemes'
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
 Plug 'nathanaelkane/vim-indent-guides'
 
 " Syntax
@@ -102,7 +104,6 @@ Plug 'evanmiller/nginx-vim-syntax'
 Plug 'stephpy/vim-yaml'
 Plug 'nvie/vim-flake8'
 Plug 'digitaltoad/vim-jade'
-Plug 'scrooloose/syntastic'
 Plug 'dag/vim-fish'
 Plug 'wavded/vim-stylus'
 Plug 'Valloric/MatchTagAlways'
@@ -122,6 +123,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 Plug 'junegunn/goyo.vim'
 Plug '~/.racer/racer', { 'for': 'rust' }
+Plug 'davidhalter/jedi-vim'
 
 " Blink
 Plug 'rhysd/clever-f.vim'
