@@ -107,6 +107,7 @@ Plug 'digitaltoad/vim-jade'
 Plug 'dag/vim-fish'
 Plug 'wavded/vim-stylus'
 Plug 'Valloric/MatchTagAlways'
+Plug 'mxw/vim-jsx'
 
 " General
 Plug 'tpope/vim-sensible'
@@ -184,6 +185,9 @@ let g:clever_f_smart_case = 1
 " vim-easymotion
 map  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
+
+" vim-jsx
+let g:jsx_ext_required = 0
 
 "
 " Beutiful vim
