@@ -95,11 +95,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'nathanaelkane/vim-indent-guides'
 
 " Syntax
-Plug 'rust-lang/rust.vim', { 'for': 'rust' }
-Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }
 Plug 'plasticboy/vim-markdown'
 Plug 'pangloss/vim-javascript'
-Plug 'tikhomirov/vim-glsl'
 Plug 'evanmiller/nginx-vim-syntax'
 Plug 'stephpy/vim-yaml'
 Plug 'nvie/vim-flake8'
@@ -112,19 +109,12 @@ Plug 'neovimhaskell/haskell-vim'
 
 " General
 Plug 'tpope/vim-sensible'
-Plug 'mhinz/vim-startify'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'scrooloose/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs'
-Plug 'simnalamburt/vim-mundo'
-Plug 'junegunn/vim-github-dashboard'
 Plug 'godlygeek/tabular'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-git'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
-Plug 'junegunn/goyo.vim'
-Plug '~/.racer/racer', { 'for': 'rust' }
 
 " Blink
 Plug 'rhysd/clever-f.vim'
@@ -132,10 +122,6 @@ Plug 'Lokaltog/vim-easymotion'
 Plug 'junegunn/vim-xmark', { 'do': 'make' }
 
 call plug#end()
-
-" vim-cpp-enhanced-highlight
-let g:cpp_class_scope_highlight = 1
-let g:cpp_experimental_template_highlight = 1
 
 " vim-airline
 let g:airline_powerline_fonts = 1
@@ -161,22 +147,6 @@ autocmd vimrc VimEnter,Colorscheme *
 
 " vim-better-whitespace
 let g:strip_whitespace_on_save = 1
-
-" nerdtree
-nnoremap <leader>n :NERDTreeToggle<CR>
-
-" gundo.vim
-let g:gundo_right = 1
-nnoremap <leader>g :GundoToggle<CR>
-
-" vim-github-dashboard
-let g:github_dashboard = { 'username': 'simnalamburt' }
-
-" racer
-set hidden
-let g:racer_cmd = "~/.racer/racer/target/release/racer"
-let $RUST_SRC_PATH=$HOME."/.racer/rust/src"
-inoremap <C-o> <C-x><C-o>
 
 " clever-f.vim
 let g:clever_f_across_no_line = 1
