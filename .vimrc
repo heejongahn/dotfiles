@@ -108,6 +108,7 @@ Plug 'dag/vim-fish'
 Plug 'wavded/vim-stylus'
 Plug 'Valloric/MatchTagAlways'
 Plug 'mxw/vim-jsx'
+Plug 'neovimhaskell/haskell-vim'
 
 " General
 Plug 'tpope/vim-sensible'
@@ -124,7 +125,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 Plug 'junegunn/goyo.vim'
 Plug '~/.racer/racer', { 'for': 'rust' }
-Plug 'davidhalter/jedi-vim'
 
 " Blink
 Plug 'rhysd/clever-f.vim'
