@@ -106,6 +106,7 @@ Plug 'wavded/vim-stylus'
 Plug 'Valloric/MatchTagAlways'
 Plug 'mxw/vim-jsx'
 Plug 'neovimhaskell/haskell-vim'
+Plug 'octol/vim-hindent'
 
 " General
 Plug 'tpope/vim-sensible'
@@ -158,6 +159,9 @@ omap / <Plug>(easymotion-tn)
 
 " vim-jsx
 let g:jsx_ext_required = 0
+
+" vim-hindent
+let g:hindent_style = "gibiansky"
 
 "
 " Beutiful vim
