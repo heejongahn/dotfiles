@@ -105,8 +105,11 @@ Plug 'dag/vim-fish'
 Plug 'wavded/vim-stylus'
 Plug 'Valloric/MatchTagAlways'
 Plug 'mxw/vim-jsx'
+Plug 'jparise/vim-graphql'
+Plug 'spoqa/nirum.vim'
+Plug 'vim-syntastic/syntastic'
 Plug 'neovimhaskell/haskell-vim'
-Plug 'octol/vim-hindent'
+Plug 'lambdatoast/elm.vim'
 
 " General
 Plug 'tpope/vim-sensible'
