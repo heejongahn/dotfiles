@@ -194,8 +194,8 @@ function! s:beauty()
   highlight NonText    ctermfg=darkblue
   highlight SpecialKey ctermfg=darkblue
 
-  " 80th column layout concerns
-  set textwidth=80
+  " 120th column layout concerns
+  set textwidth=120
   set colorcolumn=+1,+2,+3
   highlight ColorColumn ctermbg=black
 
