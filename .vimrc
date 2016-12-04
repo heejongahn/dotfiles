@@ -109,7 +109,7 @@ Plug 'jparise/vim-graphql'
 Plug 'spoqa/nirum.vim'
 Plug 'vim-syntastic/syntastic'
 Plug 'neovimhaskell/haskell-vim'
-Plug 'lambdatoast/elm.vim'
+Plug 'ElmCast/elm-vim'
 
 " General
 Plug 'tpope/vim-sensible'
@@ -165,6 +165,10 @@ let g:jsx_ext_required = 0
 
 " vim-hindent
 let g:hindent_style = "gibiansky"
+
+
+" elm-vim
+let g:elm_format_autosave = 1
 
 "
 " Beutiful vim
