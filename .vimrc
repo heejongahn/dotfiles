@@ -30,8 +30,8 @@ set autoindent
 set smartindent
 
 " Tab
-set softtabstop=2
-set shiftwidth=2
+set softtabstop=4
+set shiftwidth=4
 set expandtab
 
 " Searching
@@ -81,9 +81,6 @@ augroup vimrc
   autocmd!
 augroup END
 
-" flake8 auto execution
-autocmd BufWritePost *.py call Flake8()
-
 "
 " Plugins
 "
@@ -99,7 +96,6 @@ Plug 'plasticboy/vim-markdown'
 Plug 'pangloss/vim-javascript'
 Plug 'evanmiller/nginx-vim-syntax'
 Plug 'stephpy/vim-yaml'
-Plug 'nvie/vim-flake8'
 Plug 'digitaltoad/vim-jade'
 Plug 'dag/vim-fish'
 Plug 'wavded/vim-stylus'
@@ -107,7 +103,6 @@ Plug 'Valloric/MatchTagAlways'
 Plug 'mxw/vim-jsx'
 Plug 'jparise/vim-graphql'
 Plug 'spoqa/nirum.vim'
-Plug 'vim-syntastic/syntastic'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'ElmCast/elm-vim'
 
@@ -165,10 +160,6 @@ let g:jsx_ext_required = 0
 
 " vim-hindent
 let g:hindent_style = "gibiansky"
-
-
-" elm-vim
-let g:elm_format_autosave = 1
 
 "
 " Beutiful vim
