@@ -15,40 +15,43 @@
   git clone git@github.com:heejongahn/dotfiles.git
   ```
 
-2. Install [fish](https://fishshell.com) and [chips](https://github.com/kinoru/chips) (no puns intended)
-
+1. Install [fish shell][fish] and make it a default shell.
   ```bash
   # OS X
   brew install fish
-
-  curl -Lo ~/.local/bin/chips --create-dirs \
-    https://github.com/kinoru/chips/releases/download/1.0.0/chips_osx \
-    ; and chmod +x ~/.local/bin/chips
-
 
   # Ubuntu (using PPA)
   sudo apt-add-repository ppa:fish-shell/release-2
   sudo apt-get update
   sudo apt-get install fish
 
-  curl -Lo ~/.local/bin/chips --create-dirs \
-    https://github.com/kinoru/chips/releases/download/1.0.0/chips_linux_x64 \
-    ; and chmod +x ~/.local/bin/chips
-  ```
-
-3. Make sure your default shell is fish
-
-  ```bash
-  # OS X
   chsh -s /usr/local/bin/fish
-
-  # Ubuntu
-  chsh -s /usr/bin/fish
   ```
 
-4. Make symlinks of dotfiles to home folder
+1. Let the fish script to do the rest for you
+
+  ```fish
+  source install.fish
+  ```
+
+### In details
+
+1. Install [The Haskell Tool Stack][stack]
+  ```fish
+  curl -sSL https://get.haskellstack.org/ | sh
+  ```
+
+1. Install the latest version of [chips][chips]
+
+  ```fish
+  cd ~
+  git clone --depth 1 git@github.com:xtendo-org/chips.git
+  cd chips; stack setup; stack install
+  ```
+1. Make symlinks of dotfiles to home folder
 
   ```bash
+  cd ~
   mkdir -p .config/fish  ; ln -sf ~/dotfiles/config.fish .config/fish
   mkdir -p .config/chips ; ln -sf ~/dotfiles/plugin.yaml .config/chips
   mkdir -p .config/nvim  ; ln -sf ~/dotfiles/.vimrc      .config/nvim/init.vim
@@ -60,21 +63,25 @@
   ln -sf dotfiles/.gemrc
   ```
 
-5. Install [Vim-Plug](https://github.com/junegunn/vim-plug) and Python provider
+1. Install [vim-plug][vim-plug], plugins and Python provider
 
   ```bash
   pip install --user --upgrade neovim # For MatchTagAlways Plug
   curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  vim +PlugInstall -c cq
   ```
+1. (Optional) Set color scheme, weechat, ssh, ...
 
-6. type `:PlugInstall` in vim
-
-7. (Optional) Set color scheme, weechat, ssh, ...
-
-8. Enjoy Coding!
+1. Enjoy Coding!
 
 #### Special Thanks To
 
-- [Hyeon Kim](https://github.com/simnalamburt)'s dotfiles
-- [Jordan Bramble](https://github.com/jbrambleDC)'s bashrc
+- [Hyeon Kim][hyeon]'s dotfiles
+
+
+[fish]: https://fishshell.com
+[stack]: http://haskellstack.org/
+[chips]: https://github.com/kinoru/chips
+[vim-plug]: https://github.com/junegunn/vim-plug
+[hyeon]: https://github.com/simnalamburt
