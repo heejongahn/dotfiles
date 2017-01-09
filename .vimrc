@@ -30,8 +30,8 @@ set autoindent
 set smartindent
 
 " Tab
-set softtabstop=4
-set shiftwidth=4
+set softtabstop=2
+set shiftwidth=2
 set expandtab
 
 " Searching
