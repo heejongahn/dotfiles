@@ -7,5 +7,5 @@ github:
 # Add GitHub repositories for fish plugins here.
 # For example, uncomment below to enable the fish-sensible plugin.
 # - simnalamburt/fish-sensible
-  - oh-my-fish/theme-bobthefish
+  - simnalamburt/shellder
   - simnalamburt/cgitc
