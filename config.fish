@@ -9,3 +9,6 @@ if [ -e ~/.config/chips/build.fish ] ; source ~/.config/chips/build.fish ; end
 # pyenv & pyenv-virtualenv
 status --is-interactive; and source (pyenv init -|psub)
 status --is-interactive; and source (pyenv virtualenv-init -|psub)
+
+alias pev='pyenv'
+alias pevv='pyenv virtualenv'
