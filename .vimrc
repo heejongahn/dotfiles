@@ -30,8 +30,8 @@ set autoindent
 set smartindent
 
 " Tab
-set softtabstop=2
-set shiftwidth=2
+set softtabstop=4
+set shiftwidth=4
 set expandtab
 
 " Searching
@@ -185,8 +185,8 @@ function! s:beauty()
   highlight NonText    ctermfg=darkblue
   highlight SpecialKey ctermfg=darkblue
 
-  " 120th column layout concerns
-  set textwidth=120
+  " 80th column layout concerns
+  set textwidth=80
   set colorcolumn=+1,+2,+3
   highlight ColorColumn ctermbg=black
 
