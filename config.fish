@@ -1,5 +1,5 @@
 # neovim
-if type -q nvim; alias vim='nvim'; alias v='vim +F'; end
+alias vim='nvim'; alias v='vim +F';
 
 alias ta='tmux attach'
 set PATH $PATH ~/.local/bin node_modules/.bin/ /Applications/Postgres.app/Contents/Versions/latest/bin
