@@ -5,7 +5,6 @@ set enc=utf-8
 set backspace=indent,eol,start
 set diffopt+=iwhite,vertical
 set laststatus=2
-set pastetoggle=<F8>
 set scrolloff=3
 set switchbuf+=usetab,split
 set ruler
@@ -63,18 +62,6 @@ nnoremap <silent> <C-h> :vertical resize -5<CR>
 nnoremap <silent> <C-j> :resize -3<CR>
 nnoremap <silent> <C-k> :resize +3<CR>
 nnoremap <silent> <C-l> :vertical resize +5<CR>
-" Tab navigations
-nnoremap <esc>t :tabnew<CR>
-nnoremap <esc>1 1gt
-nnoremap <esc>2 2gt
-nnoremap <esc>3 3gt
-nnoremap <esc>4 4gt
-nnoremap <esc>5 5gt
-nnoremap <esc>6 6gt
-nnoremap <esc>7 7gt
-nnoremap <esc>8 8gt
-nnoremap <esc>9 9gt
-nnoremap $ :noh<Return>
 
 " define a group `vimrc` and initialize.
 augroup vimrc
@@ -87,37 +74,35 @@ augroup END
 call plug#begin('~/.vim/plugged')
 
 " Beauty
-Plug 'flazz/vim-colorschemes'
 Plug 'vim-airline/vim-airline'
 Plug 'nathanaelkane/vim-indent-guides'
 
 " Syntax
-Plug 'plasticboy/vim-markdown'
-Plug 'pangloss/vim-javascript'
-Plug 'evanmiller/nginx-vim-syntax'
-Plug 'stephpy/vim-yaml'
-Plug 'digitaltoad/vim-jade'
 Plug 'dag/vim-fish'
-Plug 'wavded/vim-stylus'
-Plug 'mxw/vim-jsx'
+Plug 'flowtype/vim-flow'
 Plug 'jparise/vim-graphql'
-Plug 'spoqa/nirum.vim'
-Plug 'neovimhaskell/haskell-vim'
+Plug 'digitaltoad/vim-jade'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'plasticboy/vim-markdown'
+Plug 'wavded/vim-stylus'
+Plug 'stephpy/vim-yaml'
+
 Plug 'ElmCast/elm-vim'
+Plug 'neovimhaskell/haskell-vim'
+Plug 'spoqa/nirum.vim'
+Plug 'evanmiller/nginx-vim-syntax'
 
 " General
 Plug 'tpope/vim-sensible'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'godlygeek/tabular'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'tpope/vim-git'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
+Plug 'Valloric/MatchTagAlways'
 
 " Blink
-Plug 'rhysd/clever-f.vim'
 Plug 'Lokaltog/vim-easymotion'
-Plug 'junegunn/vim-xmark', { 'do': 'make' }
 
 call plug#end()
 
@@ -146,19 +131,12 @@ autocmd vimrc VimEnter,Colorscheme *
 " vim-better-whitespace
 let g:strip_whitespace_on_save = 1
 
-" clever-f.vim
-let g:clever_f_across_no_line = 1
-let g:clever_f_smart_case = 1
-
 " vim-easymotion
 map  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
 
 " vim-jsx
 let g:jsx_ext_required = 0
-
-" vim-hindent
-let g:hindent_style = "gibiansky"
 
 "
 " Beutiful vim
@@ -232,3 +210,7 @@ autocmd vimrc BufWinLeave *
 \   call airline#load_theme()                   |
 \   call airline#update_statusline()            |
 \ endif
+
+" https://github.com/neovim/neovim/issues/2437
+let g:python_host_prog  = '/usr/local/bin/python'
+let g:python3_host_prog = '/usr/local/bin/python3'
