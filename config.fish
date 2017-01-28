@@ -12,6 +12,15 @@ alias pev='pyenv'
 alias pevv='pyenv virtualenv'
 alias pea='pyenv_activate'
 alias ped='pyenv deactivate'
+alias pel='pyenv_local_setup'
+
+function pyenv_local_setup
+  set version $argv[1]
+  set venv_name (basename $PWD)
+  pyenv virtualenv $version $venv_name
+  pyenv local $venv_name
+  pyenv_activate
+end
 
 function pyenv_init
   setenv PATH '/Users/maru/.pyenv/shims' $PATH
