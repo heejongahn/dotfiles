@@ -4,6 +4,15 @@ alias vim='nvim'; alias v='vim +F';
 alias ta='tmux attach'
 set PATH $PATH ~/.local/bin node_modules/.bin/ /Applications/Postgres.app/Contents/Versions/latest/bin
 
+# git remote
+alias grau='git_remote_add_upstream'
+
+function git_remote_add_upstream
+  set account_name $argv[1]
+  set repository_name $argv[2]
+  git remote add upstream git@github.com:$account_name/$repository_name
+end
+
 # chips
 if [ -e ~/.config/chips/build.fish ] ; source ~/.config/chips/build.fish ; end
 
