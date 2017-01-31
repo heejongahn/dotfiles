@@ -29,8 +29,8 @@ set autoindent
 set smartindent
 
 " Tab
-set softtabstop=4
-set shiftwidth=4
+set softtabstop=2
+set shiftwidth=2
 set expandtab
 
 " Searching
@@ -90,6 +90,7 @@ Plug 'stephpy/vim-yaml'
 
 Plug 'ElmCast/elm-vim'
 Plug 'neovimhaskell/haskell-vim'
+Plug 'python-mode/python-mode'
 Plug 'spoqa/nirum.vim'
 Plug 'evanmiller/nginx-vim-syntax'
 
