@@ -1,8 +1,10 @@
+alias node='node --use_strict';
+
 # neovim
 alias vim='nvim'; alias v='vim +F';
-
 alias ta='tmux attach'
-set PATH $PATH ~/.local/bin node_modules/.bin/ /Applications/Postgres.app/Contents/Versions/latest/bin
+set PATH $PATH ~/.local/bin node_modules/.bin/ /Users/ahnheejong/.local/bin ~/.cargo/bin
+export JAVA_HOME=(/usr/libexec/java_home)
 
 # git remote
 alias grau='git_remote_add_upstream'
@@ -34,7 +36,7 @@ end
 function pyenv_init
   setenv PATH '/Users/maru/.pyenv/shims' $PATH
   setenv PYENV_SHELL fish
-  . '/usr/local/Cellar/pyenv/1.0.6/libexec/../completions/pyenv.fish'
+  . '/usr/local/Cellar/pyenv/1.2.0/libexec/../completions/pyenv.fish'
   command pyenv rehash 2>/dev/null
   function pyenv
     set command $argv[1]
@@ -50,7 +52,7 @@ function pyenv_init
 end
 
 function pyenv_virtualenv_init
-  setenv PATH '/usr/local/Cellar/pyenv-virtualenv/1.0.0/shims' $PATH;
+  setenv PATH '/usr/local/Cellar/pyenv-virtualenv/1.1.1/shims' $PATH;
   setenv PYENV_VIRTUALENV_INIT 1;
   if [ -n "$VIRTUAL_ENV" ]
     pyenv activate --quiet; or pyenv deactivate --quiet; or true
@@ -65,3 +67,6 @@ function pyenv_activate
   pyenv_virtualenv_init
   [ (cat .python-version) = (basename "$PYENV_VIRTUAL_ENV") ]
 end
+
+# chips
+if [ -e ~/.config/chips/build.fish ] ; . ~/.config/chips/build.fish ; end
