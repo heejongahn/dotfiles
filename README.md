@@ -15,45 +15,31 @@
   git clone git@github.com:heejongahn/dotfiles.git
   ```
 
-1. Install [fish shell][fish] and make it a default shell.
+1. Install [zsh][fish] and make it a default shell.
   ```bash
   # OS X
-  brew install fish
+  brew install zsh
 
   # Ubuntu (using PPA)
   sudo apt-add-repository ppa:fish-shell/release-2
   sudo apt-get update
-  sudo apt-get install fish
+  sudo apt-get install zsh
 
-  chsh -s /usr/local/bin/fish
+  chsh -s /usr/local/bin/zsh
   ```
 
-1. Let the fish script to do the rest for you
+1. Let the script to do the rest for you
 
   ```fish
-  source install.fish
+  source install.sh
   ```
 
 ### In details
 
-1. Install [The Haskell Tool Stack][stack]
-  ```fish
-  curl -sSL https://get.haskellstack.org/ | sh
-  ```
-
-1. Install the latest version of [chips][chips]
-
-  ```fish
-  cd ~
-  git clone --depth 1 git@github.com:xtendo-org/chips.git
-  cd chips; stack setup; stack install
-  ```
 1. Make symlinks of dotfiles to home folder
 
   ```bash
   cd ~
-  mkdir -p .config/fish  ; ln -sf ~/dotfiles/config.fish .config/fish
-  mkdir -p .config/chips ; ln -sf ~/dotfiles/plugin.yaml .config/chips
   mkdir -p .config/nvim  ; ln -sf ~/dotfiles/.vimrc      .config/nvim/init.vim
   mkdir -p .ssh ; chmod 700 .ssh ; ln -sf ~/dotfiles/.ssh/config .ssh
 
@@ -80,8 +66,6 @@
 - [Hyeon Kim][hyeon]'s dotfiles
 
 
-[fish]: https://fishshell.com
-[stack]: http://haskellstack.org/
-[chips]: https://github.com/kinoru/chips
+[zsh]: http://www.zsh.org/ 
 [vim-plug]: https://github.com/junegunn/vim-plug
 [hyeon]: https://github.com/simnalamburt

@@ -1,19 +1,12 @@
-#!/usr/local/bin/fish
+# Install homebrew
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)";
 
-cd ~
-
-# Install the haskell tool stack
-curl -sSL https://get.haskellstack.org/ | sh
-
-# Install the lastest version of chips
-cd ~
-git clone --depth 1 git@github.com:xtendo-org/chips.git
-cd chips; stack setup; stack install
+# Utlities
+brew install zsh neovim node youtube-dl
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Make symlinks of dotfiles to home folder
 cd ~
-mkdir -p .config/fish  ; ln -sf ~/dotfiles/config.fish .config/fish
-mkdir -p .config/chips ; ln -sf ~/dotfiles/plugin.yaml .config/chips
 mkdir -p .config/nvim  ; ln -sf ~/dotfiles/.vimrc      .config/nvim/init.vim
 mkdir -p .ssh ; chmod 700 .ssh ; ln -sf ~/dotfiles/.ssh/config .ssh
 
