@@ -92,7 +92,8 @@ Plug 'ElmCast/elm-vim'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'python-mode/python-mode'
 Plug 'spoqa/nirum.vim'
-Plug 'evanmiller/nginx-vim-syntax'
+Plug 'Quramy/tsuquyomi'
+Plug 'leafgarland/typescript-vim'
 
 " General
 Plug 'tpope/vim-sensible'
