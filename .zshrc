@@ -91,7 +91,9 @@ alias egrep='egrep --color=auto --exclude-dir="\.git" --exclude-dir="\.svn"'
 alias fgrep='fgrep --color=auto --exclude-dir="\.git" --exclude-dir="\.svn"'
 alias t1='tail -n1'
 alias h1='head -n1'
-alias vi='vim'
+alias vi='nvim'
+alias vim='nvim'
+alias rawvim='vim'
 alias sbp="source_if_exists $HOME/.bash_profile"
 alias hr="cd $HSR"
 alias rakeit="rake db:drop && rake db:create && rake db:migrate && rake db:seed"
