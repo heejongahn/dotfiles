@@ -10,6 +10,11 @@ cd ~
 mkdir -p .config/nvim  ; ln -sf ~/dotfiles/.vimrc      .config/nvim/init.vim
 mkdir -p .ssh ; chmod 700 .ssh ; ln -sf ~/dotfiles/.ssh/config .ssh
 
+# ZSH
+curl -o ~/.oh-my-zsh/themes/bullet-train.zsh-theme https://raw.githubusercontent.com/caiogondim/bullet-train-oh-my-zsh-theme/master/bullet-train.zsh-theme
+ln -sf dotfiles/.zshrc
+
+# VIM
 ln -sf dotfiles/.vimrc
 ln -sf dotfiles/.gitconfig
 ln -sf dotfiles/.gitignore
