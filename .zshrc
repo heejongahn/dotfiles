@@ -1,6 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=${HOME}/.oh-my-zsh
-export DEFAULT_USER="nobell"
+export DEFAULT_USER="maru"
 export EDITOR=/usr/local/bin/vim
 
 export BULLETTRAIN_PROMPT_SEPARATE_LINE=false
