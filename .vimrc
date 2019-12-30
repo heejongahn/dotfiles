@@ -3,8 +3,8 @@
 "
 set enc=utf-8
 set backspace=indent,eol,start
-set diffopt+=iwhite,vertical
 set laststatus=2
+set diffopt=iwhite,vertical
 set scrolloff=3
 set switchbuf+=usetab,split
 set ruler
