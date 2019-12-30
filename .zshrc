@@ -54,9 +54,10 @@ plugins=(git)
 
 # User configuration
 
-# export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+# export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/mysql/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
+export PATH=$HOME/dev/flutter/bin:$HOME/.cargo/bin:$HOME/.fastlane/bin:$PATH:/usr/local/share/npm/bin
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
@@ -595,3 +596,16 @@ function squash() {
 }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/maru/workspace/nevermind/router/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/maru/workspace/nevermind/router/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/maru/workspace/nevermind/router/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/maru/workspace/nevermind/router/node_modules/tabtab/.completions/sls.zsh
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /Users/maru/workspace/nevermind/router/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/maru/workspace/nevermind/router/node_modules/tabtab/.completions/slss.zsh
+
+# added by travis gem
+[ -f /Users/maru/.travis/travis.sh ] && source /Users/maru/.travis/travis.sh
